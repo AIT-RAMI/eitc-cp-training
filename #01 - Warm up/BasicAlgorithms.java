@@ -20,7 +20,7 @@ public class BasicAlgorithms {
     int q = (int) 1e4;
     while (q-- > 0) {
       int e = (int) 1e6 + 5;
-      int idx = ternarySearch(arr, e);
+      int idx = binarySearch(arr, e);
     }
 
     //for (int i = 0; i < n; i++) {
@@ -75,7 +75,7 @@ public class BasicAlgorithms {
     return -1;
   }
 
-  // Insertion sort: Time complexity O(n^2)
+  // Selection sort: Time complexity O(n^2)
 
   public static int imin(int[] arr, int l, int r) {
     int imin = l;
@@ -127,6 +127,7 @@ public class BasicAlgorithms {
       int m = (l + r) / 2;
       mergeSort(arr, l, m);
       mergeSort(arr, m + 1, r);
+      // backtracking
       merge(arr, l, r);
     }
   }
